@@ -1,0 +1,5 @@
+.ErrorMessage {
+  border: 0.125rem dashed var(--oc-red-5);
+  border-radius: 0.125rem;
+  word-break: break-word;
+}

@@ -1,0 +1,49 @@
+.LaunchButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 16rem;
+  transform: scaleY(0.8);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 1rem var(--oc-red-8);
+  background-image: linear-gradient(to bottom, var(--oc-red-7), var(--oc-red-5));
+  color: var(--oc-gray-1);
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition-property: transform, box-shadow, opacity;
+  transition-duration: var(--transition-time-fast);
+  transition-timing-function: var(--transition-function);
+  filter: var(--filter-shadow--outset);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus { outline: 0; }
+
+  /* Works around flex alignment bug in Safari */
+  &::before,
+  &::after {
+    content: '';
+    flex: 1 0 auto;
+  }
+}
+
+.LaunchButton:active,
+.LaunchButton--launched {
+  transform: scaleY(0.8) translateY(1rem);
+  box-shadow: 0 0 var(--oc-red-8);
+}
+
+.LaunchButton:disabled,
+.LaunchButton--launched {
+  cursor: default;
+}
+
+.LaunchButton--launched {
+  background-image: linear-gradient(to bottom, var(--oc-green-7), var(--oc-green-5));
+}

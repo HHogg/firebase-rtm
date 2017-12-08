@@ -1,0 +1,47 @@
+@keyframes AvatarBounce {
+  0%   { transform: translateY(0%); }
+  20%  { transform: translateY(0%); }
+  40%  { transform: translateY(-50%); }
+  50%  { transform: translateY(0%); }
+  60%  { transform: translateY(-20%); }
+  80%  { transform: translateY(0%); }
+  100% { transform: translateY(0%); }
+}
+
+@keyframes AvatarFlash {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.Avatar {
+  display: block;
+  width: 100%;
+  max-width: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.125rem solid var(--text-color);
+  border-radius: 50%;
+  transition-property: border-color;
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+  filter: var(--filter-shadow--outset);
+}
+
+.Avatar--blue { border-color: var(--oc-blue-5); }
+.Avatar--green { border-color: var(--oc-green-5); }
+.Avatar--red { border-color: var(--oc-red-5); }
+
+.Avatar--flash {
+  animation-name: AvatarFlash;
+  animation-duration: var(--transition-time-slow);
+  animation-iteration-count: infinite;
+  animation-timing-function: var(--transition-function);
+}
+
+.Avatar--bounce {
+  animation-name: AvatarBounce;
+  animation-duration: var(--transition-time-slow);
+  animation-iteration-count: infinite;
+  animation-timing-function: var(--transition-function);
+}

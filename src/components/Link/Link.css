@@ -1,0 +1,10 @@
+.Link {
+  color: inherit;
+  text-decoration: underline;
+  transition-property: opacity;
+  transition-duration: var(--transition-time-fast);
+  transition-timing-function: var(--transition-function);
+
+  &:hover { opacity: 0.8; cursor: pointer; }
+  &:active { opacity: 0.6; }
+}

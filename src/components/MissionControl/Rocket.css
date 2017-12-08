@@ -1,0 +1,65 @@
+@keyframes RocketFlames {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.Rocket {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-property: bottom;
+  transition-duration: 5s;
+  transition-timing-function: var(--transition-function);
+}
+
+.Rocket--launch {
+  bottom: 150%;
+}
+
+.Rocket__container {
+  position: relative;
+  width: 100%;
+  max-width: 10rem;
+  margin: 0 auto;
+}
+
+.Rocket__ship {
+  position: relative;
+  opacity: 0.9;
+}
+
+.Rocket__body { fill: var(--oc-white); }
+.Rocket__window { fill: var(--oc-blue-2); }
+.Rocket__main-tank { fill: var(--oc-gray-2); }
+.Rocket__sub-tank { fill: var(--oc-gray-3); }
+
+.Rocket__flames {
+  opacity: 0;
+
+  @nest .Rocket--launch & {
+    opacity: 1;
+  }
+}
+
+.Rocket__flame {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  margin: 0 auto;
+  animation-name: RocketFlames;
+  animation-duration: var(--transition-time-fast);
+  animation-iteration-count: infinite;
+  animation-timing-function: var(--transition-function);
+}
+
+.Rocket__flame:first-child {
+  transform: translate(-50%, 75%) rotate(180deg);
+  animation-delay: 0;
+}
+
+.Rocket__flame:last-child {
+  transform: translate(-50%, 75%) scaleX(-1) rotate(180deg);
+  animation-delay: calc(var(--transition-time-fast) * 0.5);
+}

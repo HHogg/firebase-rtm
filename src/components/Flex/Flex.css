@@ -1,0 +1,77 @@
+.Flex             { flex: 1 1 auto; }
+.Flex--shrink     { flex: 0 0 auto; }
+
+.Flex--horizontal,
+.Flex--vertical {
+  display: flex;
+}
+
+.Flex--from-content { flex-basis: auto; }
+.Flex--from-nothing { flex-basis: 0%; }
+
+.Flex--horizontal { flex-direction: row; }
+.Flex--vertical   { flex-direction: column; }
+
+.Flex--align-self-start  { align-self: flex-start; }
+.Flex--align-self-middle { align-self: center; }
+.Flex--align-self-end    { align-self: flex-end; }
+
+.Flex--horizontal.Flex--align-horz-start   { justify-content: flex-start; }
+.Flex--horizontal.Flex--align-horz-middle  { justify-content: center; }
+.Flex--horizontal.Flex--align-horz-end     { justify-content: flex-end; }
+.Flex--horizontal.Flex--align-horz-around  { justify-content: space-around; }
+.Flex--horizontal.Flex--align-horz-between { justify-content: space-between; }
+
+.Flex--horizontal.Flex--align-vert-start  { align-items: flex-start; }
+.Flex--horizontal.Flex--align-vert-middle { align-items: center; }
+.Flex--horizontal.Flex--align-vert-end    { align-items: flex-end; }
+
+.Flex--vertical.Flex--align-horz-start  { align-items: flex-start; }
+.Flex--vertical.Flex--align-horz-middle { align-items: center; }
+.Flex--vertical.Flex--align-horz-end    { align-items: flex-end; }
+
+.Flex--vertical.Flex--align-vert-start   { justify-content: flex-start; }
+.Flex--vertical.Flex--align-vert-middle  { justify-content: center; }
+.Flex--vertical.Flex--align-vert-end     { justify-content: flex-end; }
+.Flex--vertical.Flex--align-vert-around  { justify-content: space-around; }
+.Flex--vertical.Flex--align-vert-between { justify-content: space-between; }
+
+.Flex--gutter-x1 > .Flex { margin: calc(var(--space--x1) * 0.5); }
+.Flex--gutter-x2 > .Flex { margin: calc(var(--space--x2) * 0.5); }
+.Flex--gutter-x3 > .Flex { margin: calc(var(--space--x3) * 0.5); }
+.Flex--gutter-x4 > .Flex { margin: calc(var(--space--x4) * 0.5); }
+.Flex--gutter-x6 > .Flex { margin: calc(var(--space--x6) * 0.5); }
+
+.Flex--gutter-x1 > .Flex,
+.Flex--gutter-x2 > .Flex,
+.Flex--gutter-x3 > .Flex,
+.Flex--gutter-x4 > .Flex,
+.Flex--gutter-x6 > .Flex {
+  &:first-child {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.Flex--vertical.Flex--gutter-x1 > .Flex,
+.Flex--vertical.Flex--gutter-x2 > .Flex,
+.Flex--vertical.Flex--gutter-x3 > .Flex,
+.Flex--vertical.Flex--gutter-x4 > .Flex,
+.Flex--vertical.Flex--gutter-x6 > .Flex {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.Flex--horizontal.Flex--gutter-x1 > .Flex,
+.Flex--horizontal.Flex--gutter-x2 > .Flex,
+.Flex--horizontal.Flex--gutter-x3 > .Flex,
+.Flex--horizontal.Flex--gutter-x4 > .Flex,
+.Flex--horizontal.Flex--gutter-x6 > .Flex {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,21 @@
+.Input {
+  display: block;
+  padding: var(--space--x2) var(--space--x3);
+  border: 0;
+  border-radius: var(--border-radius);
+  background-color: var(--background-color--light);
+  color: var(--text-color);
+  letter-spacing: 0.0625rem;
+  text-align: center;
+  line-height: 0.75rem;
+  appearance: none;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0.625rem var(--oc-blue-5);
+  }
+
+  &:disabled {
+    color: var(--text-color-subtle);
+  }
+}

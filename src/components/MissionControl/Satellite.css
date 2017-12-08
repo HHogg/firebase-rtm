@@ -1,0 +1,33 @@
+@keyframes Satellite {
+  0%   { transform: translateX(0%) translateY(0%); }
+  25%  { transform: translateX(-20%) translateY(10%); }
+  50%  { transform: translateX(0%) translateY(20%); }
+  75%  { transform: translateX(20%) translateY(10%); }
+  100% { transform: translateX(0%) translateY(0%); }
+}
+
+.Satellite {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateY(-150%);
+  transition-property: transform;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
+}
+
+.Satellite--connected {
+  transform: translateY(0%);
+}
+
+.Satellite__container {
+  position: relative;
+  width: 100%;
+  max-width: 5rem;
+  margin: 0 auto;
+  animation-name: Satellite;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

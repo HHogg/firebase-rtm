@@ -1,0 +1,41 @@
+.Text {
+  font-weight: inherit;
+}
+
+.Text--align-left { text-align: left; }
+.Text--align-center { text-align: center; }
+.Text--align-right { text-align: right; }
+
+.Text--break-all { word-break: break-all; }
+.Text--break-none { white-space: nowrap; }
+.Text--break-word { word-wrap: break-word; }
+
+.Text--color-blue  { color: var(--oc-blue-5); }
+.Text--color-dark  { color: var(--oc-gray-9); }
+.Text--color-light { color: var(--oc-gray-2); }
+.Text--color-red   { color: var(--oc-red-5); }
+.Text--color-green { color: var(--oc-green-5); }
+
+.Text--subtle   { color: var(--text-color-subtle); }
+
+.Text--size-small {
+  font-size: 0.625rem;
+  letter-spacing: 0.0625rem;
+  line-height: 0.75rem;
+}
+
+.Text--size-medium {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.Text--size-large {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.Text--weak     { font-weight: 400; }
+.Text--strong   { font-weight: 700; }
+
+.Text--uppercase { text-transform: uppercase; }
+.Text--emphasise { font-style: italic; }

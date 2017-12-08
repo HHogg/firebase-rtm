@@ -1,0 +1,48 @@
+.Step {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-property: opacity, transform;
+  transition-delay: var(--transition-time-slow);
+  transition-duration: var(--transition-time-base);
+  transition-timing-function: var(--transition-function);
+}
+
+.Step--complete {
+  transform: translateY(-100%) scale(0.8);
+  opacity: 0;
+}
+
+.Step--disabled {
+  transform: translateY(100%) scale(0.8);
+  opacity: 0;
+}
+
+.StepIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--background-color--light);
+  color: var(--text-color--subtle);
+  font-size: 2rem;
+  transition-property: background-color, color, transform;
+  transition-duration: var(--transition-time-slow);
+  transition-timing-function: var(--transition-function);
+}
+
+.StepIcon--complete {
+  transform: rotate(1440deg) scale(1);
+  background-color: var(--oc-green-6);
+  color: var(--oc-green-9);
+}
+
+.StepBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-color--light);
+}

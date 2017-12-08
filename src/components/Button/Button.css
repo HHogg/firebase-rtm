@@ -1,0 +1,44 @@
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space--x2) var(--space--x3);
+  border: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.5rem var(--oc-blue-7);
+  background-color: var(--oc-blue-5);
+  color: var(--oc-gray-1);
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition-property: box-shadow, transform, opacity;
+  transition-duration: var(--transition-time-fast);
+  transition-timing-function: var(--transition-function);
+  filter: var(--filter-shadow--outset);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0.5rem);
+    box-shadow: 0 0 var(--oc-blue-7);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+    filter: none;
+  }
+
+  /* Works around flex alignment bug in Safari */
+  &::before,
+  &::after {
+    content: '';
+    flex: 1 0 auto;
+  }
+}

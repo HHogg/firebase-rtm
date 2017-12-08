@@ -1,0 +1,64 @@
+/* stylelint-disable selector-max-universal */
+
+:root {
+  --space--x1: 0.375rem;
+  --space--x2: calc(var(--space--x1) * 2);
+  --space--x3: calc(var(--space--x1) * 3);
+  --space--x4: calc(var(--space--x1) * 4);
+  --space--x6: calc(var(--space--x1) * 6);
+
+  --background-color: var(--oc-gray-9);
+  --background-color--light: var(--oc-gray-8);
+
+  --border-radius: 0.125rem;
+
+  --text-color: var(--oc-gray-2);
+  --text-color-subtle: var(--oc-gray-6);
+
+  --transition-time-fast: 200ms;
+  --transition-time-base: 400ms;
+  --transition-time-slow: 800ms;
+  --transition-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --color-shadow-RGB: var(--oc-black-rgb);
+
+  --filter-shadow--outset:
+    drop-shadow(0 0.25rem 0.375rem rgba(var(--color-shadow-RGB), 0.11))
+    drop-shadow(0 0.0625rem 0.1875rem rgba(var(--color-shadow-RGB), 0.08));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  user-select: none;
+}
+
+html,
+body,
+.AppContainer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow: hidden;
+}
